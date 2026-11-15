@@ -1,0 +1,82 @@
+:root{--bg:#E8F2FA;--card:#FBFDFE;--ink:#12305A;--mute:#4A6788;--line:#BCD6EC;--blue:#1B5BA8;--onblue:#fff;--head:#2468B0;--onhead:#fff;--door:#E0A12B;--wa:#168A46;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0C1B2E;--card:#12284A;--ink:#E8F2FA;--mute:#9DB6D0;--line:#24456B;--blue:#7DB5EA;--onblue:#0C1B2E;--head:#143A66;--onhead:#fff;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0C1B2E;--card:#12284A;--ink:#E8F2FA;--mute:#9DB6D0;--line:#24456B;--blue:#7DB5EA;--onblue:#0C1B2E;--head:#143A66;--onhead:#fff;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 Manrope,system-ui,sans-serif}
+header{text-align:center;background-color:var(--head);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%23fff' stroke-opacity='.2' stroke-width='1.4'%3E%3Crect x='12' y='12' width='32' height='32'/%3E%3Crect x='12' y='12' width='32' height='32' transform='rotate(45 28 28)'/%3E%3Ccircle cx='28' cy='28' r='5'/%3E%3C/g%3E%3C/svg%3E");color:var(--onhead);padding:44px 20px 40px;border-bottom:4px solid var(--door);box-shadow:0 4px 0 var(--card)}
+h1{font:700 clamp(34px,7vw,58px)/1.1 "Reem Kufi",sans-serif;margin:0 auto;max-width:1100px}
+header p{margin:10px auto 0;max-width:620px;opacity:.92;font:400 18px/1.7 Tajawal,Manrope,sans-serif}header p strong{font-weight:700;font-size:20px}
+main{max-width:1100px;margin:0 auto;padding:24px 20px 60px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.chip{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:6px 18px;font:600 14px Manrope,sans-serif;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--blue);color:var(--onblue);border-color:var(--blue)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(min-width:760px){.grid{grid-template-columns:repeat(3,1fr)}}@media(min-width:1000px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{display:flex;flex-direction:column;background:var(--card);border:1.5px solid var(--line);border-radius:18px;padding:10px;overflow:hidden}
+.ph{aspect-ratio:3/4;background-color:var(--line);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='56' viewBox='0 0 56 56'%3E%3Cg fill='none' stroke='%231B5BA8' stroke-opacity='.22' stroke-width='1.4'%3E%3Crect x='12' y='12' width='32' height='32'/%3E%3Crect x='12' y='12' width='32' height='32' transform='rotate(45 28 28)'/%3E%3Ccircle cx='28' cy='28' r='5'/%3E%3C/g%3E%3C/svg%3E");border-radius:999px 999px 10px 10px;overflow:hidden;border:3px solid var(--blue)}.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.body{padding:12px 4px 4px;display:flex;flex-direction:column;flex:1}
+.body h2{margin:0;font-size:16px}.price{font:700 20px "Reem Kufi",sans-serif;color:var(--blue)}
+.desc{flex:1;margin:4px 0 0;font-size:14px;color:var(--mute)}
+.wa{margin-top:12px;background:var(--wa);color:#fff;text-align:center;text-decoration:none;font-weight:700;font-size:14px;padding:10px;border-radius:99px}
+.empty{text-align:center;color:var(--mute);padding:60px 0}
+.admin{margin-top:40px;border-top:4px solid var(--door);padding-top:20px}
+.admin h3{font:700 24px "Reem Kufi",sans-serif;margin:0 0 12px}
+input,select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:8px 10px}
+:is(input,select,textarea,button,a):focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.btn{background:var(--blue);color:var(--onblue);border:0;border-radius:10px;padding:9px 16px;font:700 15px Manrope,sans-serif;cursor:pointer}
+.btn:disabled{opacity:.6}
+.del{background:none;border:0;color:#D43A3A;font:700 14px Manrope,sans-serif;cursor:pointer;padding:6px 10px}
+.form{display:grid;gap:10px;grid-template-columns:1fr 1fr;background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:14px;margin-bottom:18px}
+.form .full{grid-column:1/-1}
+.row{display:flex;align-items:center;gap:10px;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:8px;margin-bottom:8px}
+.row .t{width:44px;height:58px;border-radius:99px 99px 6px 6px;overflow:hidden;background:var(--line);flex:none}.row .t img{width:100%;height:100%;object-fit:cover}
+.row .i{flex:1}.row small{color:var(--mute)}
+.catform{display:flex;gap:8px;margin-bottom:12px}
+button.ph{display:block;width:100%;padding:0;cursor:pointer;position:relative;font:inherit;color:inherit}
+.more{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.6);color:#fff;font:700 12px Manrope,sans-serif;padding:3px 8px;border-radius:99px}
+.title{background:none;border:0;padding:0;margin:0;font:700 16px Manrope,sans-serif;color:var(--ink);text-align:left;cursor:pointer}
+.card .desc{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.buy{margin-top:12px}.buy .wa{display:block}
+.qty{display:flex;align-items:flex-end;justify-content:space-between;gap:8px}
+.stp{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:99px;overflow:hidden}
+.stp button{width:34px;height:34px;border:0;background:var(--card);color:var(--ink);font:700 18px Manrope,sans-serif;cursor:pointer}
+.stp span{min-width:30px;text-align:center;font-weight:700}
+.tot{font-size:13px;color:var(--mute);text-align:right}.tot b{color:var(--ink)}
+.ov{position:fixed;inset:0;background:rgba(5,15,30,.65);display:flex;align-items:center;justify-content:center;padding:12px;z-index:40}
+.dlg{position:relative;background:var(--card);color:var(--ink);border-radius:20px;width:100%;max-width:440px;max-height:94vh;overflow:auto;padding:12px}
+.x{position:absolute;top:10px;right:10px;z-index:3;width:36px;height:36px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:16px;cursor:pointer}
+.car{position:relative}
+.sl{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;border-radius:999px 999px 12px 12px;border:3px solid var(--blue);aspect-ratio:4/5;background:var(--line)}
+.sl::-webkit-scrollbar{display:none}
+.sl img{flex:none;width:100%;height:100%;object-fit:cover;scroll-snap-align:center}
+.ar{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;border:0;background:rgba(255,255,255,.88);color:#12305A;font-size:20px;line-height:1;cursor:pointer}
+.ar.l{left:8px}.ar.r{right:8px}@media(hover:none){.ar{display:none}}
+.dots{display:flex;justify-content:center;gap:6px;margin:10px 0}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--line)}.dots i.on{background:var(--blue)}
+.dlg .desc{white-space:pre-line;font-size:15px;display:block}
+.mini{font:700 13px Manrope,sans-serif;color:var(--blue);background:none;border:0;cursor:pointer;padding:6px 10px}
+
+a.ph{display:block;position:relative}
+a.title{text-decoration:none;display:block}
+.lock{display:flex;align-items:center;justify-content:center;margin:8px 0 0 8px;width:34px;height:34px;border:1px solid var(--line);border-radius:8px;background:var(--card);text-decoration:none;font-size:15px;opacity:.8}
+.page{max-width:460px;margin:0 auto;padding:16px 16px 60px}
+.back{display:inline-block;margin:6px 0 14px;font-weight:700;color:var(--blue);text-decoration:none}
+.page h1{font:700 26px "Reem Kufi",sans-serif;margin:12px 4px 0;max-width:none}
+.page .desc{white-space:pre-line;font-size:15px;display:block;margin:8px 4px}
+.wrap{max-width:900px;margin:0 auto;padding:20px}
+.bar{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
+.bar h1{margin:0;font-size:30px}
+.tabs{display:flex;gap:8px;margin-bottom:18px}
+.tab{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:8px 16px;font:700 15px Manrope,sans-serif;cursor:pointer}
+.tab[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.note{background:var(--card);border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:14px;font-size:14px}
+.login{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.login form{width:100%;max-width:360px;display:grid;gap:10px;background:var(--card);border:1.5px solid var(--line);border-radius:16px;padding:22px}
+.login h1{font:700 26px "Reem Kufi",sans-serif;margin:0 0 4px}
+
+.adminTitle{font:700 22px "Reem Kufi",sans-serif;margin:18px 0 10px}.options{margin:4px 0;color:var(--mute);font-size:14px}.options b{color:var(--ink)}.soldout{margin-top:12px;padding:10px;border-radius:99px;text-align:center;background:var(--line);color:var(--mute);font-weight:700}.stp button:disabled{opacity:.35;cursor:not-allowed}.photoManage{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.photoThumb{width:68px;height:78px;position:relative;border-radius:10px;overflow:hidden;border:1px solid var(--line)}.photoThumb img{width:100%;height:100%;object-fit:cover}.photoThumb button{position:absolute;top:2px;right:2px;border:0;border-radius:50%;width:22px;height:22px;background:rgba(0,0,0,.72);color:#fff;font-size:17px;line-height:1;cursor:pointer}.row .mini{white-space:nowrap}@media(max-width:560px){.wrap{padding:14px}.bar{align-items:flex-start;gap:8px;flex-direction:column}.bar h1{font-size:27px}.row{flex-wrap:wrap}.row .i{min-width:55%}.form{grid-template-columns:1fr}.form .full{grid-column:1}.catform{flex-direction:column}}
+.choice{display:grid;gap:4px;margin:7px 0;color:var(--mute);font-size:13px;font-weight:700}.choice select{padding:7px 9px}
+.choice{display:grid;gap:4px;margin:7px 0;color:var(--mute);font-size:13px;font-weight:700}.choice select{padding:7px 9px}
+
+.storeSearch{max-width:440px;margin:0 0 16px}
