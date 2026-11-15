@@ -79,4 +79,8 @@ a.title{text-decoration:none;display:block}
 .choice{display:grid;gap:4px;margin:7px 0;color:var(--mute);font-size:13px;font-weight:700}.choice select{padding:7px 9px}
 .choice{display:grid;gap:4px;margin:7px 0;color:var(--mute);font-size:13px;font-weight:700}.choice select{padding:7px 9px}
 
-.storeSearch{max-width:440px;margin:0 0 16px}
+.storeSearch{max-width:440px;margin:0 0 16px} 
+/* photo de profil dans le header */
+header{position:relative}
+.owner{display:block;width:96px;height:96px;border-radius:50%;object-fit:cover;border:3px solid var(--door);box-shadow:0 0 0 3px rgba(255,255,255,.25);margin:0 auto 16px}
+@media(min-width:1000px){.owner{position:absolute;left:max(24px,calc((100% - 1100px)/2));top:50%;transform:translateY(-50%);width:120px;height:120px;margin:0}}
