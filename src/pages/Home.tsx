@@ -10,7 +10,7 @@ import {
 } from "../lib/supabase";
 import { STORE_NAME, CURRENCY } from "../config";
 import BuyBox from "../components/BuyBox";
-import fatherImg from "./father.png";
+import fatherImg from "../father.png";
 
 export default function Home() {
   const [cats, setCats] = useState<Category[]>([]);
