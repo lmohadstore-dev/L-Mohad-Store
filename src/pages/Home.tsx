@@ -32,7 +32,11 @@ export default function Home() {
   const list = products.filter(p => (!active || p.category_id === active) && (!term || `${p.name} ${p.description}`.toLocaleLowerCase().includes(term)))
 
   return <>
-    <header><img className="owner" src="/owner.jpg" alt="Photo de profil" width="120" height="120" /><h1>{STORE_NAME}</h1><p dir="rtl" lang="ar"><strong>اكتشف ما تحب، واختر ما يناسبك!</strong><br/>تشكيلة متنوعة، اختيارات مميزة، وطلب سهل ومباشر عبر واتساب.</p></header>
+        <header>
+      <div className="owner-frame"><img src="/owner.jpg" alt="Photo de profil" /></div>
+      <h1>{STORE_NAME}</h1>
+      <p dir="rtl" lang="ar"><strong>اكتشف ما تحب، واختر ما يناسبك!</strong><br/>تشكيلة متنوعة، اختيارات مميزة، وطلب سهل ومباشر عبر واتساب.</p>
+    </header>
     <Link to="/login" className="lock" aria-label="Espace propriétaire" title="Espace propriétaire">🔒</Link>
     <main>
       <input className="storeSearch" type="search" placeholder="Rechercher un produit…" value={search} onChange={e => setSearch(e.target.value)} aria-label="Rechercher un produit"/>
