@@ -1,6 +1,6 @@
 import type { Product } from './lib/supabase'
 
-export const STORE_NAME = 'L’Mohad Store'
+export const STORE_NAME = 'M. Abdllah Store'
 export const WHATSAPP = '212667153776' // +212 667153776
 export const CURRENCY = 'MAD'
 
